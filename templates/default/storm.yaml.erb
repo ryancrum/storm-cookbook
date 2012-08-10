@@ -27,7 +27,7 @@ nimbus.host: "<%= @nimbus_host %>"
 
 <% if @supervisor_ports %>
 supervisor.slots.ports:
-<% @supervisor_ports.each do |p|
+<% @supervisor_ports.each do |p| %>
    - <%= p %>
 <% end %>
 <% end %>
