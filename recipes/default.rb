@@ -33,6 +33,7 @@ bash "install storm #{node[:storm][:src_version]}" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
     unzip #{storm_zip}
+    rm -rf #{node[:storm][:install_dir]}
     mv storm-#{node[:storm][:src_version]} #{node[:storm][:install_dir]}
   EOH
 end
