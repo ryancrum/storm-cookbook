@@ -36,4 +36,8 @@ supervisor.slots.ports:
 java.library.path: "<%= @java_lib_path %>"
 <% end %>
 
-
+<% if @custom_config %>
+<% @custom_config.each do |k, v| %>
+<%= k %>: <%= if v.kind_of? then String "\"#{v}\"" else v end %>
+<% end %>
+<% end %>

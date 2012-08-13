@@ -45,6 +45,7 @@ template "#{node[:storm][:install_dir]}/conf/storm.yaml" do
     :zookeeper_servers => node[:storm][:zookeeper_servers],
     :nimbus_host => node[:storm][:nimbus_host],
     :java_lib_path => node[:storm][:java_lib_path],
-    :supervisor_ports => node[:storm][:supervisor_ports]
+    :supervisor_ports => node[:storm][:supervisor_ports],
+    :custom_config => node[:storm][:custom_config]
   })
 end

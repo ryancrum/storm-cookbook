@@ -24,3 +24,4 @@ default[:storm][:zookeeper_servers] = []
 default[:storm][:nimbus_host] = "localhost"
 default[:storm][:java_lib_path] = nil
 default[:storm][:supervisor_ports] = nil
+default[:storm][:custom_config] = {}
