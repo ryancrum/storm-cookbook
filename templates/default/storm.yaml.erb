@@ -38,6 +38,6 @@ java.library.path: "<%= @java_lib_path %>"
 
 <% if @custom_config %>
 <% @custom_config.each do |k, v| %>
-<%= k %>: <%= if v.kind_of? then String "\"#{v}\"" else v end %>
+<%= k %>: <%= if v.kind_of? String then "\"#{v}\"" else v end %>
 <% end %>
 <% end %>
